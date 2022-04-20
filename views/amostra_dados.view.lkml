@@ -35,8 +35,8 @@ view: amostra_dados {
 
   dimension: map_location {
     type: location
-    sql_latitude: ${latitude} ;;
-    sql_longitude: ${longitude} ;;
+    sql_latitude: ROUND(${latitude}, 2) ;;
+    sql_longitude: ROUND(${longitude}, 2) ;;
   }
 
   dimension: month {
