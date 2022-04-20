@@ -33,6 +33,12 @@ view: amostra_dados {
     sql: ${TABLE}.longitude ;;
   }
 
+  dimension: map_location {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+  }
+
   dimension: month {
     type: number
     sql: ${TABLE}.[month] ;;
