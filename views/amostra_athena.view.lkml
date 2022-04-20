@@ -36,8 +36,8 @@ view: amostra_athena {
 
   dimension: map_location {
     type: location
-    sql_latitude: ROUND(${latitude}, 4) ;;
-    sql_longitude: ROUND(${longitude}, 4) ;;
+    sql_latitude: ROUND(${latitude}, 12) ;;
+    sql_longitude: ROUND(${longitude}, 12) ;;
   }
 
   dimension: coordenates {
