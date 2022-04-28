@@ -33,6 +33,12 @@ view: amostra_athena {
     sql: ${TABLE}.longitude ;;
   }
 
+  dimension: map_location {
+    type: location
+    sql_latitude: ROUND(${latitude}, 12) ;;
+    sql_longitude: ROUND(${longitude}, 12) ;;
+  }
+
   dimension: coordenates {
     type: location
     sql_latitude: ${latitude} ;;

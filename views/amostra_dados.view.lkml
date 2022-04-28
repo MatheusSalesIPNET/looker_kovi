@@ -32,10 +32,6 @@ view: amostra_dados {
     sql: ${TABLE}.longitude ;;
   }
 
-  dimension: geometry_field {
-    type: string
-    tags: ["geojson"]
-    sql: ST_ASGEOJSON(ST_GEOGFROMTEXT(${TABLE}.field_name)) ;; }
 
   dimension: month {
     type: number
