@@ -14,8 +14,7 @@ view: amostra_athena {
   }
 
   dimension: deviceid {
-    type: number
-    value_format_name: id
+    type: string
     sql: ${TABLE}.deviceid ;;
   }
 
@@ -73,6 +72,13 @@ view: amostra_athena {
     type: number
     sql: ${TABLE}.[year] ;;
   }
+
+  dimension: car_lines {
+    type: location
+    sql_latitude:${latitude} ;;
+    sql_longitude:${longitude} ;;
+  }
+
 
   measure: count {
     type: count

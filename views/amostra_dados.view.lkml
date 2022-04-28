@@ -1,6 +1,5 @@
 view: amostra_dados {
-  sql_table_name: [kovi_looker.amostra_dados]
-    ;;
+  sql_table_name: kovi_looker.amostra_dados;;
 
   dimension: altitude {
     type: number
@@ -32,6 +31,11 @@ view: amostra_dados {
     type: number
     sql: ${TABLE}.longitude ;;
   }
+
+  dimension: geometry_field {
+    type: string
+    tags: ["geojson"]
+    sql: ST_ASGEOJSON(ST_GEOGFROMTEXT(${TABLE}.field_name)) ;; }
 
   dimension: month {
     type: number
@@ -69,7 +73,6 @@ view: amostra_dados {
 
   measure: count {
     type: count
-    approximate_threshold: 100000
     drill_fields: [eventname]
   }
 }
