@@ -33,16 +33,11 @@ view: amostra_athena {
     sql: ${TABLE}.longitude ;;
   }
 
-  dimension: map_location {
+  dimension: coordinates {
+    label: "Coordenadas Geográficas"
     type: location
     sql_latitude: ROUND(${latitude}, 12) ;;
     sql_longitude: ROUND(${longitude}, 12) ;;
-  }
-
-  dimension: coordenates {
-    type: location
-    sql_latitude: ${latitude} ;;
-    sql_longitude: ${longitude} ;;
   }
 
   dimension: month {
@@ -77,12 +72,6 @@ view: amostra_athena {
   dimension: year {
     type: number
     sql: ${TABLE}.[year] ;;
-  }
-
-  dimension: car_lines {
-    type: location
-    sql_latitude:${latitude} ;;
-    sql_longitude:${longitude} ;;
   }
 
 

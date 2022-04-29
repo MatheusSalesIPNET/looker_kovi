@@ -9,10 +9,3 @@ include: "/views/amostra_athena.view.lkml"                # include all views in
 #
 explore: amostra_athena {
 }
-
-#
-#   join: users {
-#     relationship: many_to_one
-#     sql_on: ${users.id} = ${orders.user_id} ;;
-#   }
-# }
