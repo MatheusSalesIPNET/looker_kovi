@@ -9,6 +9,9 @@ include: "/views/amostra_athena.view.lkml"                # include all views in
 #
 explore: amostra_athena {
 }
+
+# explore: amostra_athena_2 {
+# }
 #
 #   join: users {
 #     relationship: many_to_one
