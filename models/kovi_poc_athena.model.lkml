@@ -8,9 +8,6 @@ include: "/views/amostra_athena.view.lkml"                # include all views in
 # # and define the joins that connect them together.
 #
 explore: amostra_athena {
-  always_filter: {
-    filters: [deviceid: "4634613918"]
-  }
 }
 
 #
