@@ -77,6 +77,6 @@ view: amostra_athena {
 
   measure: count {
     type: count
-    drill_fields: [eventname]
+    drill_fields: [altitude, deviceid, eventname, latitude, longitude, coordinates, vehiclebattery, vehicleodometer]
   }
 }
